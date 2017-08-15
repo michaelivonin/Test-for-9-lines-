@@ -1,0 +1,21 @@
+.information
+  @include section-default
+  padding-top: $vertical-gutter * 3.75
+  padding-bottom: $vertical-gutter * 3.75
+
+  &__item
+    @include text-default
+    height: $input-height
+    padding: $input-padding-vertical 0
+    border: none
+    box-shadow: none
+    border-bottom: $input-border
+    margin-bottom: $vertical-gutter * 3.125
+
+    &:focus
+      border: none
+      box-shadow: none
+      border-bottom: $input-border-focus
+
+  &__item_margin-bottom-none
+    margin-bottom: 0

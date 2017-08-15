@@ -5,12 +5,14 @@ doctype html
 html
   head(lang="en")
     include pug/metatags.pug
-    +title('Главная')
+    +title('Test')
     include pug/styles.pug
   body
     include pug/svg.pug
 
-    //- Code here
-
+    .container
+      include pug/includes/information
+      include pug/includes/skills
+    // /.container
 
     include pug/scripts.pug

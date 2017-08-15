@@ -46,13 +46,21 @@
 
 // 0. FontFaces
 
-$font-family-main: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+@font-face {
+  src: url('../../fonts/Roboto-Medium.ttf') format('truetype');
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+}
+
+//$font-family-main: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-family-main: 'Roboto', Arial, sans-serif;
 
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(640);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #1779ba,
@@ -61,12 +69,12 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$body-background: $white;
+$light-gray: #f0f0f0;
+$medium-gray: #666;
+$dark-gray: #333;
+$black: #010101;
+$white: #fff;
+$body-background: $light-gray;
 $body-font-color: $black;
 $body-font-family: $font-family-main;
 $body-antialiased: true;
@@ -98,13 +106,14 @@ $breakpoint-classes: (small medium large);
 // -----------
 
 $grid-row-width: $global-width;
-$grid-column-count: 12;
+$grid-column-count: 8;
 $grid-column-gutter: (
   small: 20px,
-  medium: 30px,
+  medium: 20px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
+$vertical-gutter: rem-calc(8);
 
 // 4. Base Typography
 // ------------------
@@ -375,16 +384,24 @@ $form-label-line-height: 1.8;
 $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
-$input-color: $black;
+//$input-font-size: rem-calc(16);
+$input-font-size: rem-calc(12);
+$input-height: $vertical-gutter * 3.625;
+$input-line-height: $global-lineheight;
+$input-border-width: rem-calc(2);
+$input-padding-vertical: $input-height - $input-line-height * $input-font-size - $input-border-width;
+//$input-color: $black;
+$input-color: $medium-gray;
 $input-placeholder-color: $medium-gray;
 $input-font-family: inherit;
-$input-font-size: rem-calc(16);
-$input-font-weight: $global-weight-normal;
+//$input-font-weight: $global-weight-normal;
+$input-font-weight: 500;
 $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
+//$input-border: 1px solid $medium-gray;
+$input-border: $input-border-width solid $dark-gray;
+$input-border-focus: $input-border-width solid $light-gray;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0 0 5px $medium-gray;
 $input-cursor-disabled: not-allowed;

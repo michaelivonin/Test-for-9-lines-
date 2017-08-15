@@ -1,12 +1,12 @@
 {
-  "name": "foundation-project-template",
-  "version": "1.0.2",
+  "name": "9-lines-test",
+  "version": "1.0.0",
   "description": "Simple boilerplate Gulp + Rigger + Sass + Foundation + BrowserSync",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Amir Gafurov <gafurovamir@gmail.com>",
+  "author": "Michael Ivonin <Michael@drummer.ru>",
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.11.2",

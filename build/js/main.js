@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
     // Если в проекте используются встроенные js-плагины от Foundation, разкомментировать
     // $(document).foundation();
