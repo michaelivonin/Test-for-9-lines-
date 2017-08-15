@@ -74,6 +74,7 @@ $medium-gray: #666;
 $dark-gray: #333;
 $black: #010101;
 $white: #fff;
+$blue: #0093d7;
 $body-background: $light-gray;
 $body-font-color: $black;
 $body-font-family: $font-family-main;
@@ -119,17 +120,22 @@ $vertical-gutter: rem-calc(8);
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+//$header-font-weight: $global-weight-normal;
+$header-font-weight: inherit;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
-$header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+//$header-color: inherit;
+$header-color: $black;
+//$header-lineheight: 1.4;
+$header-lineheight: 22 / 18;
+//$header-margin-bottom: 0.5rem;
+$header-margin-bottom: $vertical-gutter * 2.625;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),
     'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
+    //'h3': ('font-size': 19),
+    'h3': ('font-size': 18),
     'h4': ('font-size': 18),
     'h5': ('font-size': 17),
     'h6': ('font-size': 16),
@@ -137,7 +143,8 @@ $header-styles: (
   medium: (
     'h1': ('font-size': 48),
     'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
+    //'h3': ('font-size': 31),
+    'h3': ('font-size': 18),
     'h4': ('font-size': 25),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
@@ -387,7 +394,7 @@ $select-radius: $global-radius;
 //$input-font-size: rem-calc(16);
 $input-font-size: rem-calc(12);
 $input-height: $vertical-gutter * 3.625;
-$input-line-height: $global-lineheight;
+$input-line-height: 22 / 12;
 $input-border-width: rem-calc(2);
 $input-padding-vertical: $input-height - $input-line-height * $input-font-size - $input-border-width;
 //$input-color: $black;

@@ -1,0 +1,57 @@
+.skills
+  @include section-default
+  padding-top: $vertical-gutter * 4.375
+  padding-bottom: $vertical-gutter * 4.375
+
+  &__heading
+    //color: $black
+    //font-size: rem-calc(18)
+
+  &__item
+    width: rem-calc(19)
+    margin-right: rem-calc(8)
+    position: relative
+    float: left
+
+    label
+      width: rem-calc(19)
+      height: rem-calc(19)
+      margin: 0
+      cursor: pointer
+      position: absolute
+      top: 0
+      left: 0
+      background: $light-gray
+      border-radius: rem-calc(5)
+
+      &:after
+        content: ''
+        width: rem-calc(12)
+        height: rem-calc(5)
+        position: absolute
+        top: rem-calc(5)
+        left: rem-calc(4)
+        border: rem-calc(2) solid $white
+        border-top: none
+        border-right: none
+        background: transparent
+        opacity: 0
+        transform: rotate(-45deg)
+
+      &:hover
+        border: rem-calc(1) solid $blue
+
+    input[type=checkbox]
+      visibility: hidden
+      margin: 0
+
+      &:checked + label
+        background: $blue
+        border-color: $blue
+
+      &:checked + label:after
+        opacity: 1
+
+      &:checked:hover + label
+        opacity: 0.8
+        border: none
