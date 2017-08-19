@@ -2,10 +2,10 @@
   @include section-default
   padding-top: $vertical-gutter * 4.375
   padding-bottom: $vertical-gutter * 4.375
+  line-height: 1.2
 
   &__heading
-    //color: $black
-    //font-size: rem-calc(18)
+    padding: 0 rem-calc(10)
 
   &__item
     width: rem-calc(19)
@@ -22,12 +22,12 @@
       top: 0
       left: 0
       background: $light-gray
-      border-radius: rem-calc(5)
+      border-radius: rem-calc(4)
 
       &:after
         content: ''
         width: rem-calc(12)
-        height: rem-calc(5)
+        height: rem-calc(6)
         position: absolute
         top: rem-calc(5)
         left: rem-calc(4)
@@ -55,3 +55,18 @@
       &:checked:hover + label
         opacity: 0.8
         border: none
+
+  &__text
+    @include text-default
+    overflow: hidden
+
+  &__text_margin-bottom-none
+    margin-bottom: 0
+
+
+@media (max-width: 640px)
+
+  .skills
+
+    &__text_small-margin-bottom
+      margin-bottom: $paragraph-margin-bottom
