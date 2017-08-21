@@ -8,32 +8,32 @@
     padding: 0 rem-calc(10)
 
   &__item
-    width: rem-calc(19)
-    margin-right: rem-calc(8)
     position: relative
     float: left
+    margin-right: rem-calc(8)
+    width: rem-calc(19)
 
     label
-      width: rem-calc(19)
-      height: rem-calc(19)
-      margin: 0
-      cursor: pointer
       position: absolute
       top: 0
       left: 0
-      background: $light-gray
+      margin: 0
       border-radius: rem-calc(4)
+      width: rem-calc(19)
+      height: rem-calc(19)
+      background: $light-gray
+      cursor: pointer
 
       &:after
-        content: ''
-        width: rem-calc(12)
-        height: rem-calc(6)
         position: absolute
         top: rem-calc(5)
         left: rem-calc(4)
+        content: ''
         border: rem-calc(2) solid $white
         border-top: none
         border-right: none
+        width: rem-calc(12)
+        height: rem-calc(6)
         background: transparent
         opacity: 0
         transform: rotate(-45deg)
@@ -46,15 +46,15 @@
       margin: 0
 
       &:checked + label
-        background: $blue
         border-color: $blue
+        background: $blue
 
       &:checked + label:after
         opacity: 1
 
       &:checked:hover + label
-        opacity: 0.8
         border: none
+        opacity: 0.8
 
   &__text
     @include text-default

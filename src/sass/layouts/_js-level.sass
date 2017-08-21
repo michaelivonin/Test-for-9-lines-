@@ -4,28 +4,28 @@
   padding-bottom: $vertical-gutter * 7.25
 
   &__info-block
-    display: inline-block
     position: relative
+    display: inline-block
 
   &__icon-meter
     width: rem-calc(254)
     height: $vertical-gutter * 16
 
   &__indicator-block
-    width: rem-calc(19)
-    height: $vertical-gutter * 2.375
     position: absolute
     bottom: rem-calc(-6)
     left: 50%
     margin-left: rem-calc(-(14 / 2))
+    width: rem-calc(19)
+    height: $vertical-gutter * 2.375
     transform: rotateZ(-90deg)
     animation: rotateIt 2s 2s ease forwards
 
   &__icon-indicator
-    width: rem-calc(59)
-    height: $vertical-gutter * 5
     margin-top: -($vertical-gutter * 5.75)
     margin-left: rem-calc(-20.7)
+    width: rem-calc(59)
+    height: $vertical-gutter * 5
     transform: rotateZ(58deg)
 
   &__heading
@@ -33,11 +33,11 @@
     line-height: 1.38
 
   &__counter
-    font-size: rem-calc(50)
-    color: $blue
     margin-bottom: 0
+    font-size: rem-calc(50)
     font-weight: 900
     line-height: 0.9
+    color: $blue
 
 
 @keyframes rotateIt
