@@ -4,12 +4,18 @@
   padding-bottom: $vertical-gutter * 3.75
   position: relative
 
+  &__image
+    border-radius: 50%
+
   &__icon-stamp
     width: rem-calc(169)
     height: $vertical-gutter * 19
     position: absolute
     right: rem-calc(4)
     bottom: $vertical-gutter * 1.375
+    visibility: hidden
+    transform: scale(50)
+    animation: showIt 0.4s 5s ease-out forwards
 
   &__item
     @include text-default
@@ -27,3 +33,18 @@
 
   &__item_margin-bottom-none
     margin-bottom: 0
+
+@keyframes showIt
+  0%
+    transform: scale(50)
+  10%
+    transform: scale(45)
+    visibility: visible
+  100%
+    transform: scale(1)
+    visibility: visible
+
+@media (max-width: 640px)
+
+  .information__column
+    text-align: center

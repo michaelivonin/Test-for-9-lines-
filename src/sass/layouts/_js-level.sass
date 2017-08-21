@@ -3,11 +3,6 @@
   padding-top: $vertical-gutter * 7.25
   padding-bottom: $vertical-gutter * 7.25
 
-  &:hover
-
-    .js-level__indicator-block
-      animation: pegIt 2s ease forwards
-
   &__info-block
     display: inline-block
     position: relative
@@ -24,6 +19,7 @@
     left: 50%
     margin-left: rem-calc(-(14 / 2))
     transform: rotateZ(-90deg)
+    animation: rotateIt 2s 2s ease forwards
 
   &__icon-indicator
     width: rem-calc(59)
@@ -43,20 +39,19 @@
     font-weight: 900
     line-height: 0.9
 
-@keyframes pegIt
+
+@keyframes rotateIt
   0%
     transform: rotate(-90deg)
-  //16%
-    transform: rotate(-(calc(-90 + (180 * 16%)))deg)
-  //25%
-    transform: rotate(-(calc(-90 + (180 * 25%)))deg)
-  //30%
-    transform: rotate(-(calc(-90 + (180 * 30%)))deg)
-  //36%
-    transform: rotate(-(calc(-90 + (180 * 36%)))deg)
-  //42%
-    transform: rotate(-(calc(-90 + (180 * 42%)))deg)
   50%
     transform: rotate(90deg)
   100%
     transform: rotate(-18deg)
+
+@media (max-width: 640px)
+
+  .js-level
+    text-align: center
+
+    &__heading
+      margin-top: $vertical-gutter * 1.875
